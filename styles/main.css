@@ -320,6 +320,15 @@ body {
     text-shadow: 3px 3px #000;
 }
 
+#get-in-touch {
+    font-size: 2vw;
+}
+
+#leave-message {
+    font-size: 2vw;
+    margin-bottom: 12px;
+}
+
 .right-side-contact {
     display: flex;
     align-items: start;
@@ -338,21 +347,19 @@ body {
 .right-side-contact #message{
     font-size: 1.22vw;
     padding-top: 10px;
-    height: 220px;
+    height: 150px;
     width: 100%;
 }
 
 .right-side-contact button{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 62%;
     cursor: pointer;
+    width: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     border-radius: 5px;
     font-size: 16pt;
-    padding: 16px;
+    padding: 12px;
+    margin-top: 12px;
     border: none;
     background-color: var(--red-cta);
 }
@@ -360,11 +367,11 @@ body {
 .contact-page .contact-card {
     display: flex;
     justify-content: center;
-    align-items: center;
- 
+    align-items: stretch;
     position: relative;
+
     width: 60vw;
-    height: 450px;
+    height: 70vh;
     margin: 5vh auto 10vw;
     background-color: var(--dark-bg3);
     border-radius: 10px;
@@ -377,20 +384,23 @@ body {
     text-align: start;
     color: var(--paragraph-color);
     font-size: 1.5em;
-    font-style: italic;
-    padding: 0 0 2rem 0;
+    padding: 0 0 3rem 0;
 }
 
-.contact-page .contact-card .input-fields{
+.contact-page .contact-card #sub-p{
+    padding: 0 0 1rem 0;
+}
+
+.contact-page .contact-card .left-side-contact{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    padding: 3rem 0 3rem 3rem;
+    padding: 3rem 0 0rem 3rem;
     border-right: 0.7px solid #494949;
     padding-right: 30px;
     height: 100%;
-    width: 60%;
+    width: 80%;
     background-color: var(--dark-bg2);
 }
 
