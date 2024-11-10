@@ -17,6 +17,9 @@
     --text-color: #f0f0f0;
     --paragraph-color: #cdcaca;
     --link-color: #3282F6;
+    --text-red-lowopacity: #ef44441f;
+    --orange-red-gradienthor: linear-gradient(to left, var(--orange-cta), var(--red-cta));
+    --orange-red-gradientvert: linear-gradient(to bottom, var(--orange-cta), var(--red-cta));
 }
 
 html {
@@ -43,6 +46,8 @@ body {
     padding: 0 3rem;
 }
 
+/* ------------------------------------------HEROOOO SECTION ----------------------------------------------- */
+
 .hero-page {
     display: flex;
     justify-content: center;
@@ -50,7 +55,7 @@ body {
     flex-direction: row;
 
     margin-top: 2em;
-    height: 60vh;
+    min-height: 60vh;
     width: 100%;
 }
 
@@ -163,6 +168,96 @@ body {
         font-size: 1.4rem;
     }
 }
+
+
+
+/* ------------------------------------------ EVENT HIGHTLIGHTSSS ----------------------------------------------- */
+
+.event-highlights {
+
+    margin-top: 10vh;
+
+}
+
+
+.event-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    min-height: 60vh;
+}
+
+.left-content {
+    flex-grow: 1;
+    width: 50vw;
+}
+
+.left-content .numTh{
+    color: var(--text-red-lowopacity);
+    font-size: 13em;
+    font-family: "Montserrat", sans-serif;
+}
+
+.text-content {
+    position: relative;
+
+    justify-self: flex-end;
+    margin-top: -10px;
+    margin-left: 10vw;
+    padding: 3vh 5vw 3vh 2vw;
+
+}
+
+.text-content::before {
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px; /* Thickness of the border */
+  border-radius: 3px;
+  background: var(--orange-red-gradientvert);
+
+}
+
+.text-content h1{
+    font-size: 2.5em;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+}
+
+.text-content p{
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    color: var(--paragraph-color);
+}
+
+.right-content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 40%;
+    height: 100%;
+}
+
+.right-content img{  
+    height: 250px;
+
+    min-height: 200px;
+}
+
+.right-content #img-right {
+    align-self: flex-end;
+    margin-top: 33px;
+}
+
+
+/* ------------------------------------------ How to Particiapte ----------------------------------------------- */
+
 
 .container2 {
     border-radius: 20px;
@@ -298,6 +393,66 @@ body {
     
 
 }
+
+
+/* ------------------------------------------SPONSORS SRCTIOOON ----------------------------------------------- */
+
+.sponsors-container {
+    margin-top: 10vh;
+
+}
+.sponsors-container p {
+    font-size: 18pt;
+    margin-bottom: 20px;
+}
+
+.sponsor-h1 {
+    position: relative;
+
+    display: inline-block;
+    font-size: 3vw;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.sponsor-h1::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateX(90px);
+    width: 80px;
+    height: 8px;
+    border-radius: 3px;
+    background: var(--orange-red-gradienthor);
+    
+}
+
+
+.sponsors-container div{
+}
+
+.sponsors-container .sponsor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+
+}
+
+.sponsors-container .sponsor .item{
+    color: var(--paragraph-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--dark-bg2);
+    border-radius: 10px;
+    height: 250px;
+}
+
+
+/* ------------------------------------------CONTACT SECTION ----------------------------------------------- */
 
 .contact-page .umak-p {
     text-align: center;
