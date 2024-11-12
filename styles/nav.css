@@ -1,21 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Metrophobic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Metrophobic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--dark-bg);
+}
+::-webkit-scrollbar-thumb{
+    background-color: orange;
+}
+
 :root {
-    --dark-bg: #13171C;
+    --dark-bg: #0f1d4e;
     --dark-bg2: #181E27;
     --dark-bg3: #1F2634;
     --red-cta: #EF4444;
     --orange-cta: #F58412;
     --text-color: #f0f0f0;
-    --paragraph-color: #cdcaca;
-    --link-color: #3282F6;
 }
 
 html {
@@ -35,7 +40,7 @@ body {
     background-color: var(--dark-bg);
 }
 
-nav {
+/* nav {
     max-width: 1563px;
     margin-left: auto;
     margin-right: auto;
@@ -45,15 +50,54 @@ nav {
     align-items: center;
     background-color: var(--dark-bg);
     margin-bottom: 3px solid #f3f3f3;
+} */
+ nav {
+    width: 100%;
+    max-width: 1563px;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-bg);
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: background-color 0.3s ease;
 }
 
-.nav-links {
+.nav-links ul {
+    list-style: none;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-wrap: wrap; /* Wraps items on smaller screens */
+}
+.nav-links li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
 }
 
-.nav-links a {
+.nav-links li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: orange; /* Professional accent color, adjustable */
+    position: absolute;
+    bottom: -8px; /* Slightly closer to the text */
+    left: 0;
+    transition: width 0.4s ease-out;
+    border-radius: 2px;
+}
+nav ul li:hover::after,
+nav ul li.active::after {
+    width: 100%; /* Underline expands to full width on hover */
+}
+
+
+/* .nav-links a {
     height: 3rem;
     color: var(--text-color);
     font-family: "Montserrat", sans-serif;
@@ -64,10 +108,25 @@ nav {
     padding: 0 20px;
     font-weight: 500;
     transition: .3s ease;
+} */
+.nav-links a {
+    color: white;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+    
+}
+nav ul li a:hover,
+nav ul li.active a {
+    color: orange; /* Standout hover color, can be modified to fit your design */
 }
 
+
 #contact-link {
-    background-color: var(--text-color);
+    background-color: var(--orange-cta);
     box-shadow: 7px 8px #000;
     color: var(--dark-bg);
     border-radius: 3px;
@@ -80,14 +139,15 @@ nav {
 }
 
 #contact-link:hover {
-    background-color: var(--red-cta);
+    background-color: transparent;
+    border: 2px solid var(--orange-cta);
     color: var(--text-color);
     box-shadow: 0 0 15px #eda1a1;
 }
 
-.nav-links a:not(#contact-link):hover {
+/* .nav-links a:not(#contact-link):hover {
     text-shadow: 0 0 5px #fff;
-}
+} */
 
 .logo {
     display: flex;
