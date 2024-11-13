@@ -10,33 +10,37 @@
 </head>
 <body>
     <nav>
-        <div class="logo">
+        <!-- Logo Section -->
+        <a href="index.html" class="logo">
             <img src="images/logo.png" alt="UMAK Logo">
-            
-        </div>
-       
+        </a>
+    
+        <!-- Sidebar Toggle Checkbox for Mobile -->
         <input type="checkbox" id="sidebar-active">
     
+        <!-- Burger Menu Icon for Opening Sidebar -->
         <label for="sidebar-active" id="burger" class="open-sidebar">
-    
             <div class="line1 burger-line"></div>
             <div class="line2 burger-line"></div>
             <div class="line3 burger-line"></div>
-    
         </label>        
-        
-        <div class="nav-links">
-            <label for="sidebar-active" id="close" class="close-sidebar">
     
+        <!-- Navigation Links Section -->
+        <div class="nav-links">
+            <!-- Close Icon for Closing Sidebar -->
+            <label for="sidebar-active" id="close" class="close-sidebar">
                 <div class="line1 close-line"></div>
                 <div class="line2 close-line"></div>
+            </label>
     
-            </label>       
-            
-            <a class="home-link" href="index.html">Home</a>
-            <a class="about-link" href="#">About Us</a>
-            <a class="gallery-link" href="gallery.html">Gallery</a>
-            <a class="contact-link" href="#" id="contact-link">Contact Us</a>
+            <!-- List of Navigation Links -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li ><a href="about.html">About</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li class="active"><a href="gallery.html">Gallery</a></li>
+                <li><a class="contact-link" href="#" id="contact-link">Contact Us</a></li>
+            </ul>
         </div>
     </nav>
 
